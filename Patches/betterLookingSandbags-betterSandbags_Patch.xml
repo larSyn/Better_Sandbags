@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+
+  <!--========== Better (Looking) Sandbags/Better Sandbags ==========-->
+
+  	<Operation Class="PatchOperationSequence">
+	    <success>Always</success> 
+		<operations>
+	    	<li Class="ModCheck.FindFile">
+                <modName>BetterSandbags</modName>
+                <file>Buildings_Security.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+			    <xpath>Defs/ThingDef[defName = "BetterSandbags"]/graphicData/texPath</xpath>
+			    <value>
+					<texPath>Things/betterSandbags_stuffed_atlas</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			    <xpath>Defs/ThingDef[defName = "BetterSandbags"]/blueprintGraphicData/texPath</xpath>
+			    <value>
+					<texPath>Things/betterSandbags_atlas_blueprint</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			    <xpath>Defs/ThingDef[defName = "BetterSandbags"]/uiIconPath</xpath>
+			    <value>
+					<uiIconPath>UI/Icons/betterSandbags_stuffed_icon</uiIconPath>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+			    <xpath>Defs/ThingDef[defName = "BetterSandbags"]/constructEffect</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

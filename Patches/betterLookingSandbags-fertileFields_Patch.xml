@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+
+  <!--========== Better (Looking) Sandbags/Stuffed sandbags ==========-->
+
+  	<Operation Class="PatchOperationSequence">
+	    <success>Always</success> 
+		<operations>
+	    	<li Class="ModCheck.FindFile">
+                <modName>[RF] Fertile Fields [b18]</modName>
+                <file>Buildings_RFF.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+			    <xpath>Defs/ThingDef[defName = "HeavySandbags"]/graphicData/texPath</xpath>
+			    <value>
+					<texPath>Things/betterSandbags_stuffed_atlas</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			    <xpath>Defs/ThingDef[defName = "HeavySandbags"]/blueprintGraphicData/texPath</xpath>
+			    <value>
+					<texPath>Things/betterSandbags_atlas_blueprint</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			    <xpath>Defs/ThingDef[defName = "HeavySandbags"]/uiIconPath</xpath>
+			    <value>
+					<uiIconPath>UI/Icons/betterSandbags_stuffed_icon</uiIconPath>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
